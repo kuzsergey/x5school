@@ -1,12 +1,12 @@
 package homeWork_2.task_4;
 
+import java.util.Scanner;
+
 public class Program4 {
     public static void main(String[] args) {
-        if (args.length != 1) {
-            System.out.println("Введите одно целое число.");
-            return;
-        }
-        int i = Integer.parseInt(args[0]);
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введите целое  число:");
+        int i = scanner.nextInt();
         if (i > 0) {
             i++;
         } else if (i < 0) {

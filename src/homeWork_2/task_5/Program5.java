@@ -1,22 +1,22 @@
 package homeWork_2.task_5;
 
+import java.util.Scanner;
+
 public class Program5 {
     public static void main(String[] args) {
-        if (args.length != 3) {
-            System.out.println("Введите три  целых числа.");
-            return;
+        Scanner scanner = new Scanner(System.in);
+        int[] array = new int[3];
+        for (int i = 0; i < 3; i++) {
+            System.out.print("Введите целое число:");
+            array[i] = scanner.nextInt();
         }
-        int a = Integer.parseInt(args[0]);
-        int b = Integer.parseInt(args[1]);
-        int c = Integer.parseInt(args[2]);
-        int min = 0;
-        if (a < b) {
-            min = a;
-        } else min = b;
-        if (c < min) {
-            min = c;
+        int min = array[0];
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] < min) {
+                min = array[i];
+            }
         }
-        System.out.println(min);
+        System.out.println("Минимальное число: " + min);
 
     }
 }
