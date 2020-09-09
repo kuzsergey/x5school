@@ -11,7 +11,9 @@ public class Program4 {
             i++;
         } else if (i < 0) {
             i -= 2;
-        } else i = 10;
+        } else {
+            i = 10;
+        }
         System.out.println(i);
     }
 }

@@ -7,16 +7,20 @@ public class Program6 {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите целое число:");
         int i = scanner.nextInt();
+        boolean positive;
+        boolean evenNumber;
+        positive = i > 0;
+        evenNumber = (i % 2) == 0;
         if (i == 0) {
             System.out.println("Нулевое число");
-        } else if (i > 0) {
-            if ((i % 2) == 0) {
+        } else if (positive) {
+            if (evenNumber) {
                 System.out.println("Положительное четное число");
             } else {
                 System.out.println("Положительное нечетное число");
             }
         } else {
-            if ((i % 2) == 0) {
+            if (evenNumber) {
                 System.out.println("Отрицательное четное число");
             } else {
                 System.out.println("Отрицательное нечетное число");
