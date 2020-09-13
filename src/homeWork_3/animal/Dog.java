@@ -1,19 +1,24 @@
 package homeWork_3.animal;
 
 public class Dog extends Animal {
+    private String tail;
+
     public Dog() {
-        super();
-        this.food = "Кость";
-        this.location = "Будка";
+        super("Кость", "Будка");
+    }
+
+    public Dog(String tail) {
+        this();
+        this.tail = tail;
     }
 
     @Override
-    void makeNoise() {
+    public void makeNoise() {
         System.out.println("Собака лает.");
     }
 
     @Override
-    void eat() {
+    public void eat() {
         System.out.println("Собака грызет кость.");
     }
 }

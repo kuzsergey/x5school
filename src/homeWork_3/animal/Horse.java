@@ -1,19 +1,32 @@
 package homeWork_3.animal;
 
 public class Horse extends Animal {
+    private String mane;
+
     public Horse() {
-        super();
-        this.food = "Сено";
-        this.location = "Канюшня";
+        super("Сено", "Канюшня");
+    }
+
+    public Horse(String mane) {
+        this();
+        this.mane = mane;
+    }
+
+    public String getMane() {
+        return mane;
+    }
+
+    public void setMane(String mane) {
+        this.mane = mane;
     }
 
     @Override
-    void makeNoise() {
+    public void makeNoise() {
         System.out.println("Лошадь ржет.");
     }
 
     @Override
-    void eat() {
+    public void eat() {
         System.out.println("Лошадь жует траву.");
     }
 }

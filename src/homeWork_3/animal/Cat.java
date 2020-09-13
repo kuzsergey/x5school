@@ -1,19 +1,24 @@
 package homeWork_3.animal;
 
 public class Cat extends Animal {
+    private String moustache;
+
     public Cat() {
-        super();
-        this.food = "Мыши";
-        this.location = "Дом";
+        super("Мыши", "Дом");
+    }
+
+    public Cat(String moustache) {
+        this();
+        this.moustache = moustache;
     }
 
     @Override
-    void makeNoise() {
+    public void makeNoise() {
         System.out.println("Кошка мяукает.");
     }
 
     @Override
-    void eat() {
+    public void eat() {
         System.out.println("Кошка пьет молоко.");
     }
 }

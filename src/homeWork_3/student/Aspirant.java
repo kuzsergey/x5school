@@ -1,7 +1,7 @@
 package homeWork_3.student;
 
 public class Aspirant extends Student {
-    String scientificWork;
+    private String scientificWork;
 
     public Aspirant(String firstName, String lastName, String group, double averageMark, String scientificWork) {
         super(firstName, lastName, group, averageMark);
@@ -17,9 +17,11 @@ public class Aspirant extends Student {
     }
 
     @Override
-    double getScholarship() {
-        if (this.averageMark == 5) {
+    public double getScholarship() {
+        if (this.getAverageMark() == 5) {
             return 200;
-        } else return 180;
+        } else {
+            return 180;
+        }
     }
 }
