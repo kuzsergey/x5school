@@ -1,16 +1,48 @@
 package homeWork_4.task_2;
 
 public abstract class Car {
-    String model;
-    String classOfCar;
-    double weight;
-    Engine motor;
+    private String model;
+    private String classOfCar;
+    private double weight;
+    private Engine motor;
 
     public Car(String model, String classOfCar, double weight, double powerMotor, String manufacturerMotor) {
         this.model = model;
         this.classOfCar = classOfCar;
         this.weight = weight;
         this.motor = new Engine(powerMotor, manufacturerMotor);
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public String getClassOfCar() {
+        return classOfCar;
+    }
+
+    public void setClassOfCar(String classOfCar) {
+        this.classOfCar = classOfCar;
+    }
+
+    public double getWeight() {
+        return weight;
+    }
+
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+
+    public Engine getMotor() {
+        return motor;
+    }
+
+    public void setMotor(Engine motor) {
+        this.motor = motor;
     }
 
     public abstract void start();

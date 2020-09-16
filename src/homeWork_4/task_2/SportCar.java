@@ -22,8 +22,8 @@ public class SportCar extends Car {
 
     @Override
     public void printInfo() {
-        System.out.println("Марка : " + this.model + ", класс : " + this.classOfCar + ", вес: " + this.weight + " кг, максимальная скорость: " +
-                this.topSpeed + " км/ч, мощность мотора: " + this.motor.power + " кВт, производитель мотора: " +
-                this.motor.manufacturer + ".");
+        System.out.println("Марка : " + this.getModel() + ", класс : " + this.getClassOfCar() + ", вес: " + this.getWeight() + " кг, максимальная скорость: " +
+                this.topSpeed + " км/ч, мощность мотора: " + this.getMotor().getPower() + " кВт, производитель мотора: " +
+                this.getMotor().getManufacturer() + ".");
     }
 }
