@@ -12,6 +12,15 @@ public class Cat extends Animal {
         this.moustache = moustache;
     }
 
+    public Cat(String food, String location) {
+        super(food, location);
+    }
+
+    public Cat(String food, String location, String moustache) {
+        super(food, location);
+        this.moustache = moustache;
+    }
+
     @Override
     public void makeNoise() {
         System.out.println("Кошка мяукает.");

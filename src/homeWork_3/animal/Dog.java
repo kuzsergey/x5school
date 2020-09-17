@@ -12,6 +12,15 @@ public class Dog extends Animal {
         this.tail = tail;
     }
 
+    public Dog(String food, String location) {
+        super(food, location);
+    }
+
+    public Dog(String food, String location, String tail) {
+        super(food, location);
+        this.tail = tail;
+    }
+
     @Override
     public void makeNoise() {
         System.out.println("Собака лает.");

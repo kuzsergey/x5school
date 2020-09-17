@@ -12,6 +12,15 @@ public class Horse extends Animal {
         this.mane = mane;
     }
 
+    public Horse(String food, String location) {
+        super(food, location);
+    }
+
+    public Horse(String food, String location, String mane) {
+        super(food, location);
+        this.mane = mane;
+    }
+
     public String getMane() {
         return mane;
     }
