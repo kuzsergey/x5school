@@ -1,5 +1,5 @@
 package homeWork_5.task_2;
 
 public enum TypeComputer {
-    Powerful, Weak
+    Gaming, Office
 }

@@ -10,11 +10,11 @@ public class ComputerFactory {
     public Computer createComputer(TypeComputer typeComputer) {
         Computer computer = new Computer();
         switch (typeComputer) {
-            case Powerful:
-                PowerCreateComputer();
+            case Gaming:
+                GamingCreateComputer();
                 break;
-            case Weak:
-                WeakCreateComputer();
+            case Office:
+                OfficeCreateComputer();
                 break;
             default:
         }
@@ -27,19 +27,19 @@ public class ComputerFactory {
         return computer;
     }
 
-    private void PowerCreateComputer() {
-        this.cpuFactory = new PowerfulCpuFactory();
-        this.ramFactory = new PowerfulRamFactory();
-        this.graphicsCardFactory = new PowerfulGraphicCardFactory();
-        this.storageDeviceFactory = new PowerfulStorageDeviceFactory();
-        this.monitorFactory = new PowerfulMonitorFactory();
+    private void GamingCreateComputer() {
+        this.cpuFactory = new GamingCpuFactory();
+        this.ramFactory = new GamingRamFactory();
+        this.graphicsCardFactory = new GamingGraphicCardFactory();
+        this.storageDeviceFactory = new GamingStorageDeviceFactory();
+        this.monitorFactory = new GamingMonitorFactory();
     }
 
-    private void WeakCreateComputer() {
-        this.cpuFactory = new WeakCpuFactory();
-        this.ramFactory = new WeakRamFactory();
-        this.graphicsCardFactory = new WeakGraphicCardFactory();
-        this.storageDeviceFactory = new WeakStorageDeviceFactory();
-        this.monitorFactory = new WeakMonitorFactory();
+    private void OfficeCreateComputer() {
+        this.cpuFactory = new OfficeCpuFactory();
+        this.ramFactory = new OfficeRamFactory();
+        this.graphicsCardFactory = new OfficeGraphicCardFactory();
+        this.storageDeviceFactory = new OfficeStorageDeviceFactory();
+        this.monitorFactory = new OfficeMonitorFactory();
     }
 }
