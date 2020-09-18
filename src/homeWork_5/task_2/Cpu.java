@@ -1,7 +1,5 @@
 package homeWork_5.task_2;
 
-import com.sun.jdi.TypeComponent;
-
 public class Cpu implements Component {
     private double clockFrequency;             //тактовая частота
     private int processorCores;                //кол-во ядер

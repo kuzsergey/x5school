@@ -47,7 +47,7 @@ public class Computer {
         this.monitor = monitor;
     }
 
-    public void turnOn(){
+    public void turnOn() {
         System.out.println("Характеристики компьютера: ");
         this.cpu.printInfo();
         this.ram.printInfo();

@@ -1,45 +1,28 @@
 package homeWork_5.task_2;
 
 public class ComputerFactory {
-    private CpuFactory cpuFactory = null;
-    private RamFactory ramFactory = null;
-    private GraphicsCardFactory graphicsCardFactory = null;
-    private StorageDeviceFactory storageDeviceFactory = null;
-    private MonitorFactory monitorFactory = null;
-
-    public Computer createComputer(TypeComputer typeComputer) {
-        Computer computer = new Computer();
+    public static Computer createComputer(TypeComputer typeComputer) {
+        Context context = new Context();
         switch (typeComputer) {
             case Gaming:
-                GamingCreateComputer();
+                context.setStrategy(new GamingCreateComputer());
                 break;
             case Office:
-                OfficeCreateComputer();
+                context.setStrategy(new OfficeCreateComputer());
                 break;
             default:
         }
-        computer.setCpu((Cpu) cpuFactory.create());
-        computer.setRam((Ram) ramFactory.create());
-        computer.setGraphicsCard((GraphicsCard) graphicsCardFactory.create());
-        computer.setStorageDevice((StorageDevice) storageDeviceFactory.create());
-        computer.setMonitor((Monitor) monitorFactory.create());
+        return context.createComputer();
 
+    }
+
+    public static Computer createComputer(AbstractFactory factory) {
+        Computer computer = new Computer();
+        computer.setCpu(factory.createCpu());
+        computer.setGraphicsCard(factory.creteGGraphicsCard());
+        computer.setRam(factory.createRam());
+        computer.setMonitor(factory.createMonitor());
+        computer.setStorageDevice(factory.createStorageDevice());
         return computer;
-    }
-
-    private void GamingCreateComputer() {
-        this.cpuFactory = new GamingCpuFactory();
-        this.ramFactory = new GamingRamFactory();
-        this.graphicsCardFactory = new GamingGraphicCardFactory();
-        this.storageDeviceFactory = new GamingStorageDeviceFactory();
-        this.monitorFactory = new GamingMonitorFactory();
-    }
-
-    private void OfficeCreateComputer() {
-        this.cpuFactory = new OfficeCpuFactory();
-        this.ramFactory = new OfficeRamFactory();
-        this.graphicsCardFactory = new OfficeGraphicCardFactory();
-        this.storageDeviceFactory = new OfficeStorageDeviceFactory();
-        this.monitorFactory = new OfficeMonitorFactory();
     }
 }
