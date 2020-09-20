@@ -1,4 +1,4 @@
-package homeWork_6.task_1;
+package homeWork_6.task_1.MyArrayCollection;
 
 public class MyArrayCollection<E> {
     private static final int DEFAULT_CAPACITY = 10;
@@ -60,5 +60,14 @@ public class MyArrayCollection<E> {
             data[i] = null;
         }
         size = 0;
+    }
+
+    void show() {
+        for (int i = 0; i < this.size(); i++) {
+            System.out.print(this.get(i));
+        }
+        System.out.println();
+        System.out.println(this.size());
+        System.out.println();
     }
 }
