@@ -1,6 +1,9 @@
 package homeWork_8;
 
-import java.sql.*;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 
 public class Main {
     public static void main(String[] args) throws homeWork_8.UnknownAccountException {
@@ -9,8 +12,9 @@ public class Main {
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
+        String url = "jdbc:h2:mem:test;INIT=RUNSCRIPT FROM './schema.sql'";
 
-        try (Connection connection = DriverManager.getConnection("jdbc:h2:mem:test;INIT=RUNSCRIPT FROM './schema.sql'")) {
+        try (Connection connection = DriverManager.getConnection(url)) {
             DBAccounts.createDB(connection);
             User user = new User();
             user.managingAccounts(connection);

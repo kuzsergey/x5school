@@ -1,10 +1,6 @@
 package homeWork_8;
 
-
-
-import java.io.File;
 import java.sql.Connection;
-import java.util.HashMap;
 import java.util.Scanner;
 
 public class User {
