@@ -1,40 +1,38 @@
 package homeWork_5.task_1;
 
 public class Calculator {
-    public static double add(double x, double y) {
+    private Logger logger;
+
+    public Calculator(Logger logger) {
+        this.logger = logger;
+    }
+
+    public double add(double x, double y) {
         double result = x + y;
-        logger(result);
+        String message = Double.toString(result);
+        logger.log(message);
         return result;
     }
 
-    public static double sub(double x, double y) {
+    public double sub(double x, double y) {
         double result = x - y;
-        logger(result);
+        String message = Double.toString(result);
+        logger.log(message);
         return result;
     }
 
-    public static double mul(double x, double y) {
+    public double mul(double x, double y) {
         double result = x * y;
-        logger(result);
+        String message = Double.toString(result);
+        logger.log(message);
         return result;
     }
 
-    public static double div(double x, double y) {
+    public double div(double x, double y) {
         double result = x / y;
-        logger(result);
+        String message = Double.toString(result);
+        logger.log(message);
         return result;
-    }
-
-    public static void logger(double result) {
-        String resultString = Double.toString(result);
-        LoggerFactory[] loggerFactories = {
-                new ConsoleLoggerFactory(),
-                new FileLoggerFactory(),
-                new DbLoggerFactory()
-        };
-        for (LoggerFactory loggerFactory : loggerFactories) {
-            loggerFactory.createLogger().log(resultString);
-        }
     }
 
 }

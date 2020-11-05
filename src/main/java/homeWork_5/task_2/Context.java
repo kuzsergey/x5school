@@ -1,18 +1,11 @@
 package homeWork_5.task_2;
 
 public class Context {
-    private CreateComputerStrategy createComputerStrategy;
-
-    public Context() {
+    Strategy strategy;
+    public void setStrategy(Strategy strategy) {
+        this.strategy = strategy;
     }
-
-    public void setStrategy(CreateComputerStrategy createComputerStrategy) {
-        this.createComputerStrategy = createComputerStrategy;
+    Computer createComputerStrategy (){
+        return strategy.createComputer();
     }
-
-    public Computer createComputer() {
-        return createComputerStrategy.createComputer();
-    }
-
-
 }

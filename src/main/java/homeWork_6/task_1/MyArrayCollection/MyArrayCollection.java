@@ -13,7 +13,7 @@ public class MyArrayCollection<E> {
         return size;
     }
 
-    public void Add(E item) {
+    public void add(E item) {
         if (size == data.length) {
             Object[] result = new Object[data.length * 2];
             for (int i = 0; i < data.length; i++) {
@@ -33,7 +33,7 @@ public class MyArrayCollection<E> {
         }
     }
 
-    void remove(int index) {
+     public void remove(int index) {
         Object[] result = new Object[data.length];
         for (int i = 0, j = 0; i < size; j++) {
             if (j != index) {
@@ -47,7 +47,7 @@ public class MyArrayCollection<E> {
         size--;
     }
 
-    void remove(E item) {
+    public void remove(E item) {
         for (int i = 0; i < size; i++) {
             if (data[i].equals(item)) {
                 remove(i);
@@ -55,14 +55,14 @@ public class MyArrayCollection<E> {
         }
     }
 
-    void clear() {
+    public void clear() {
         for (int i = 0; i < data.length; i++) {
             data[i] = null;
         }
         size = 0;
     }
 
-    void show() {
+    public void show() {
         for (int i = 0; i < this.size(); i++) {
             System.out.print(this.get(i));
         }

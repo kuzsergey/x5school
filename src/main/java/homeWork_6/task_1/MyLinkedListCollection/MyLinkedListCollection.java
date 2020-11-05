@@ -10,7 +10,7 @@ public class MyLinkedListCollection<E> {
         return size;
     }
 
-    public void Add(E item) {
+    public void add(E item) {
         Node<E> l = last;
         Node<E> newNode = new Node<>(l, item, null);
         last = newNode;

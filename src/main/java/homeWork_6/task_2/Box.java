@@ -6,14 +6,14 @@ import java.util.List;
 public class Box<E extends Fruit> {
     private List<E> fruits = new ArrayList<>();
 
-    public void Add(E fruit, int quantity) {
+    public void add(E fruit, int quantity) {
         for (int i = 0; i < quantity; i++) {
             fruits.add(fruit);
         }
     }
 
-    public void Add(E fruit) {
-        Add(fruit, 1);
+    public void add(E fruit) {
+        add(fruit, 1);
     }
 
     public float getWeight() {

@@ -1,28 +1,20 @@
 package homeWork_5.task_2;
 
 public class ComputerFactory {
-    public static Computer createComputer(TypeComputer typeComputer) {
+    Computer create(TypeComputer typeComputer) {
         Context context = new Context();
         switch (typeComputer) {
             case Gaming:
-                context.setStrategy(new GamingCreateComputer());
+                context.setStrategy((new GamingStrategy()));
                 break;
             case Office:
-                context.setStrategy(new OfficeCreateComputer());
+                context.setStrategy((new OfficeStrategy()));
                 break;
             default:
         }
-        return context.createComputer();
-
-    }
-
-    public static Computer createComputer(AbstractFactory factory) {
-        Computer computer = new Computer();
-        computer.setCpu(factory.createCpu());
-        computer.setGraphicsCard(factory.creteGGraphicsCard());
-        computer.setRam(factory.createRam());
-        computer.setMonitor(factory.createMonitor());
-        computer.setStorageDevice(factory.createStorageDevice());
+        Computer computer = context.createComputerStrategy();
         return computer;
     }
+
+
 }

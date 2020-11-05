@@ -1,18 +1,16 @@
 package homeWork_6.task_1.MyLinkedListCollection;
 
-import java.util.LinkedList;
-
 public class Main {
     public static void main(String[] args) {
         MyLinkedListCollection<String> myLinkedListCollection = new MyLinkedListCollection<>();
-        myLinkedListCollection.Add("H");
-        myLinkedListCollection.Add("e");
-        myLinkedListCollection.Add("l");
-        myLinkedListCollection.Add("l");
-        myLinkedListCollection.Add("o");
-        myLinkedListCollection.Add(" ");
-        myLinkedListCollection.Add("X");
-        myLinkedListCollection.Add("5");
+        myLinkedListCollection.add("H");
+        myLinkedListCollection.add("e");
+        myLinkedListCollection.add("l");
+        myLinkedListCollection.add("l");
+        myLinkedListCollection.add("o");
+        myLinkedListCollection.add(" ");
+        myLinkedListCollection.add("X");
+        myLinkedListCollection.add("5");
         myLinkedListCollection.show();
 
         myLinkedListCollection.remove("e");

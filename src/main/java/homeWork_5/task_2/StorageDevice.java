@@ -1,5 +1,4 @@
 package homeWork_5.task_2;
-
 public class StorageDevice implements Component {
     private String manufacturer; // производитель
     private int amountMemory;    // объем памяти

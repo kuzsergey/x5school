@@ -1,5 +1,4 @@
 package homeWork_5.task_2;
-
 public class Monitor implements Component {
     private String manufacturer;
     private double size;

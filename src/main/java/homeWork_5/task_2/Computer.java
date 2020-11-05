@@ -1,5 +1,4 @@
 package homeWork_5.task_2;
-
 public class Computer {
     private Cpu cpu;
     private Ram ram;

@@ -3,14 +3,14 @@ package homeWork_6.task_1.MyArrayCollection;
 public class Main {
     public static void main(String[] args) {
         MyArrayCollection<String> myArrayCollection = new MyArrayCollection<String>();
-        myArrayCollection.Add("H");
-        myArrayCollection.Add("e");
-        myArrayCollection.Add("l");
-        myArrayCollection.Add("l");
-        myArrayCollection.Add("o");
-        myArrayCollection.Add(" ");
-        myArrayCollection.Add("X");
-        myArrayCollection.Add("5");
+        myArrayCollection.add("H");
+        myArrayCollection.add("e");
+        myArrayCollection.add("l");
+        myArrayCollection.add("l");
+        myArrayCollection.add("o");
+        myArrayCollection.add(" ");
+        myArrayCollection.add("X");
+        myArrayCollection.add("5");
         myArrayCollection.show();
 
         myArrayCollection.remove(1);
