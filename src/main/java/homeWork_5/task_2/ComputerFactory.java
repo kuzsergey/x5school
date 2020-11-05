@@ -1,7 +1,7 @@
 package homeWork_5.task_2;
 
 public class ComputerFactory {
-    Computer create(TypeComputer typeComputer) {
+    public Computer create(TypeComputer typeComputer) {
         Context context = new Context();
         switch (typeComputer) {
             case Gaming:
