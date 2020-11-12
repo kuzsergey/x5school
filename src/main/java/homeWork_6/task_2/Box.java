@@ -5,6 +5,7 @@ import java.util.List;
 
 public class Box<E extends Fruit> {
     private List<E> fruits = new ArrayList<>();
+
     public void add(E fruit) {
         fruits.add(fruit);
     }
