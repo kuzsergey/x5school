@@ -5,15 +5,8 @@ import java.util.List;
 
 public class Box<E extends Fruit> {
     private List<E> fruits = new ArrayList<>();
-
-    public void add(E fruit, int quantity) {
-        for (int i = 0; i < quantity; i++) {
-            fruits.add(fruit);
-        }
-    }
-
     public void add(E fruit) {
-        add(fruit, 1);
+        fruits.add(fruit);
     }
 
     public float getWeight() {
@@ -24,7 +17,7 @@ public class Box<E extends Fruit> {
         return weight;
     }
 
-    public boolean Compare(Box<? extends Fruit> box) {
+    public boolean compare(Box<? extends Fruit> box) {
         return this.getWeight() == box.getWeight();
     }
 

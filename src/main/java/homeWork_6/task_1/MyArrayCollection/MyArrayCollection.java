@@ -33,17 +33,11 @@ public class MyArrayCollection<E> {
         }
     }
 
-     public void remove(int index) {
-        Object[] result = new Object[data.length];
-        for (int i = 0, j = 0; i < size; j++) {
-            if (j != index) {
-                result[i] = data[j];
-                i++;
-            } else {
-                continue;
-            }
+    public void remove(int index) {
+        for (int i = index; i < data.length - 1; i++) {
+            data[i] = data[i + 1];
         }
-        data = result;
+        data[data.length - 1] = null;
         size--;
     }
 
@@ -56,9 +50,7 @@ public class MyArrayCollection<E> {
     }
 
     public void clear() {
-        for (int i = 0; i < data.length; i++) {
-            data[i] = null;
-        }
+        data = new Object[DEFAULT_CAPACITY];
         size = 0;
     }
 

@@ -14,6 +14,7 @@ public class Main {
         myArrayCollection.show();
 
         myArrayCollection.remove(1);
+        myArrayCollection.show();
         myArrayCollection.remove(5);
         myArrayCollection.show();
 
@@ -23,6 +24,6 @@ public class Main {
 
         myArrayCollection.clear();
         myArrayCollection.show();
-
     }
+
 }

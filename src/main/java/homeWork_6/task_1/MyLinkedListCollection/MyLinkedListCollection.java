@@ -11,39 +11,39 @@ public class MyLinkedListCollection<E> {
     }
 
     public void add(E item) {
-        Node<E> l = last;
-        Node<E> newNode = new Node<>(l, item, null);
-        last = newNode;
-        if (l == null) {
-            first = newNode;
+        Node<E> newNode = new Node<>(this.last, item, null);
+        if (this.last == null) {
+            this.first = newNode;
+            this.last = newNode;
         } else {
-            l.next = newNode;
+            this.last.next = newNode;
+            this.last = newNode;
         }
         size++;
     }
 
     public void remove(int index) {
-        unlike(node(index));
+        unlink(node(index));
     }
 
     public void remove(E item) {
         if (item == null) {
             for (Node<E> node = first; node != null; node = node.next) {
                 if (node.item == null) {
-                    unlike(node);
+                    unlink(node);
                 }
             }
         } else {
             for (Node<E> node = first; node != null; node = node.next) {
                 if (item.equals(node.item)) {
-                    unlike(node);
+                    unlink(node);
                 }
             }
         }
 
     }
 
-    private void unlike(Node<E> node) {
+    private void unlink(Node<E> node) {
         E element = node.item;
         Node<E> next = node.next;
         Node<E> prev = node.prev;
@@ -71,7 +71,7 @@ public class MyLinkedListCollection<E> {
 
     private Node<E> node(int index) {
         Node<E> node;
-        if (index < (size >> 1)) {
+        if (index < (size / 2)) {
             node = first;
             for (int i = 0; i < index; i++) {
                 node = node.next;
@@ -86,13 +86,6 @@ public class MyLinkedListCollection<E> {
     }
 
     public void clear() {
-        for (Node<E> x = first; x != null; ) {
-            Node<E> next = x.next;
-            x.item = null;
-            x.next = null;
-            x.prev = null;
-            x = next;
-        }
         first = null;
         last = null;
         size = 0;
